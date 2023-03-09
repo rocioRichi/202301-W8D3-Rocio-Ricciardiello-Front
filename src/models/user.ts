@@ -5,7 +5,8 @@ export type LoginData = {
 
 export type RegisterData = LoginData & {
   firstName: string;
-  surname: string;
+  lastName: string;
+  snapUrl: string;
 };
 
 export type ProtoUser = RegisterData & {

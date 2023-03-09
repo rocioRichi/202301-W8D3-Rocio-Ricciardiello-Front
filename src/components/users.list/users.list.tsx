@@ -13,15 +13,14 @@ export function UserList() {
 
   useEffect(() => {
     dispatch(asyncLoadUsers({ token, repo }));
-  }, []);
-
+  }, [token, repo, dispatch]);
   return (
     <section>
       <h2>Usuarios</h2>
       <ul>
         {users.map((item) => (
           <li key={item.id}>
-            {item.firstName} {item.surname}
+            {item.firstName} {item.lastName}
           </li>
         ))}
       </ul>
